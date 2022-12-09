@@ -1,0 +1,108 @@
+/*index*/
+.principal{
+	text-align: center;
+}
+.corpo{
+	text-align: center;
+	margin: 50px;
+	padding: 20px 0
+}
+.corpo, h2, p{
+	padding:10px ;
+	font-weight: bold;
+}
+
+.titulo{
+	text-align: center;
+	clear: left;
+	font-family: sans-serif;
+}
+.musica{
+	display: block;
+	margin: 1px auto;
+	height: 100%;
+}
+#form{
+	  width: 60%; 
+	  margin-left: 40%;
+	  padding: 50px 20px;
+	  height: auto;
+}
+.text {
+	width: 40%;
+	padding:5px;
+}
+.text input {
+	margin: 15px 2%;
+  padding: 8px 5%;
+
+}
+.titulo{
+	background:#81b71a;
+	padding: 50px 0;
+	font-size: 25px;
+	text-align: center;
+	
+}
+
+button{
+    padding: 7px 0;
+    background:  #81b71a;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor: pointer;
+}
+.enviar{
+	padding: 15px 0;
+	width: 30%;	
+	margin:15px;
+	
+}
+.index{
+	width: 50%;	
+	margin:15px;
+
+}
+.incluir{
+	width: 20%;
+	margin-bottom: 15px;
+	margin-left: 2.5%;
+
+}
+.cancelar{
+	margin: 15px 0;
+	font-size: 15px;
+	color: black;
+}
+a{
+	padding: 15px 0;
+	width: 50%;	
+	margin:20px;
+	color: white;
+}
+
+footer {
+	text-align: center;
+	background: url(../img/bg.jpg);
+	padding: 1%;
+	color: white;
+}
+.copyringht{
+	color: #FFFFFF;
+    font-size: 13px;
+    margin: 20% 0 0;
+}
+.tabela, tr ,th{
+	clear: left;
+	font-family: sans-serif;
+	padding: 20px;
+	
+}
+
+
+
+

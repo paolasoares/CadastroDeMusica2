@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<title>Listagem de Musica</title>
+</head>
+
+<body>
+	<div class="musica">
+		<header class="titulo">
+			<h1>Listagem de Músicas</h1>
+		</header>
+	</div>
+
+	<div th:if="${musicas.isEmpty()}">
+		<h2>Não há músicas cadastradas</h2>
+	</div>
+	<div class="tabela" th:if="${!musicas.isEmpty()}">
+		<table class="tabela">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Titulo</th>
+					<th>Artista</th>
+					<th>Ano de lançamento</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="musica : ${musicas}">
+					<th scope="row" th:text="${musica.id}"></th>
+					<td th:text="${musica.titulo}"></td>
+					<td th:text="${musica.artista}"></td>
+					<td th:text="${musica.lancamento}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<button class="incluir">
+		<a th:href="@{/musicas/nova}">Incluir novo</a>
+	</button>
+
+	<footer>
+		<p class="copyringht">©copyringht Desenvolvimento web - 2022</p>
+	</footer>
+</body>
+
+</html>

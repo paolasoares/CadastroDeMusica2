@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="styleseet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/style.css" >
+	<title>Novas musicas</title>
+</head>
+
+<body>
+	<div class="musica">
+	<header class="titulo">
+		<h1>Inclusao de nova musica</h1>
+	</header>
+	</div>
+	<form id="form" action="/musicas/salvar" method="post" novalidate th:object="${musicaDTO}">
+		<div class="text">
+			<label>Titulo</label>
+			<div>
+				<input type="text" th:errorclass="is-invalid" name="titulo" th:field="*{titulo}" />
+				<div th:errors="*{titulo}"></div>
+			</div>
+		</div>
+
+		<div class="text">
+			<label>Artista</label>
+			<div>
+				<input type="text" th:errorclass="is-invalid" name="artista" th:field="*{artista}">
+				<div th:errors="*{artista}"></div>
+			</div>
+		</div>
+
+		<div class="text">
+			<label>Ano de lancamento</label>
+			<div>
+				<input type="text" th:errorclass="is-invalid" name="lancamento" th:field="*{lancamento}">
+				<div th:errors="*{lancamento}"></div>
+			</div>
+		</div>
+
+		<div>
+			<a th:href="@{/musicas}" class=" cancelar">Cancelar</a>
+			<button class="enviar" type="submit">Enviar dados</button>
+		</div>
+	</form>
+	</div>
+
+	<footer>
+		<p class="copyringht">©copyringht Desenvolvimento web - 2022</p>
+	</footer>
+</body>
+
+</html>
